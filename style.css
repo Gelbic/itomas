@@ -909,3 +909,58 @@ ul {
         font-size: 2rem;
     }
 }
+
+
+
+
+/* =========================================
+   Sjednocení zarovnání pro mobilní verze
+========================================= */
+
+@media (max-width: 768px) {
+    /* Hero sekce - vše hezky na střed */
+    .hero-text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-badges {
+        justify-content: center;
+    }
+    
+    /* Patička - zarovnání na střed */
+    .footer-content, .footer-bottom {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Přepis původního chybného zarovnání štítků a patičky vlevo */
+    .hero-badges {
+        align-items: center; 
+    }
+    
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        align-items: center; /* Přepíše původní flex-start */
+    }
+}
