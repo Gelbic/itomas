@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- FORM HANDLING ---
- // --- FORM HANDLING ---
     const contactForm = document.getElementById('main-form');
 
     if (contactForm) {
