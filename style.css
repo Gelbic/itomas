@@ -1,5 +1,4 @@
-/* iTommy - MODERN DESIGN SYSTEM
-*/
+/* iTommy - MODERN DESIGN SYSTEM */
 
 :root {
     --primary: #0f172a;
@@ -721,6 +720,7 @@ ul {
 
     .hero p {
         font-size: 1.05rem;
+        margin: 0 auto 30px auto;
     }
 
     .price-box {
@@ -735,6 +735,28 @@ ul {
     .contact-sidebar,
     .contact-main {
         padding: 32px 24px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-badges {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s-card {
+        text-align: center;
+    }
+
+    .s-icon {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -763,10 +785,19 @@ ul {
         flex-direction: column;
     }
 
+    /* ZDE JE OPRAVENÁ SEKCE PRO MOBILNÍ ŠTÍTKY */
     .hero-badges {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
+
+    .hero-badges span {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    /* KONEC OPRAVY PRO ŠTÍTKY */
 
     .form-grid {
         grid-template-columns: 1fr;
@@ -774,11 +805,49 @@ ul {
 
     .p-row {
         flex-direction: column;
-        gap: 8px;
+        align-items: flex-start;
+        background: var(--bg-light);
+        padding: 16px;
+        border-radius: var(--radius-md);
+        margin-bottom: 12px;
+        border: 1px solid var(--border) !important;
+        gap: 6px;
+    }
+
+    .p-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .p-row span {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        width: 100%;
     }
 
     .p-row strong {
+        font-size: 1.15rem;
+        color: var(--accent);
         white-space: normal;
+        margin-top: 4px;
+        display: block;
+    }
+
+    .p-row.active {
+        background: rgba(37, 99, 235, 0.05);
+        border-color: rgba(37, 99, 235, 0.2) !important;
+    }
+
+    .price-box {
+        padding: 16px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        gap: 30px;
+    }
+
+    .price-cat {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .footer-content {
@@ -907,60 +976,5 @@ ul {
 
     .legal-intro h2 {
         font-size: 2rem;
-    }
-}
-
-
-
-
-/* =========================================
-   Sjednocení zarovnání pro mobilní verze
-========================================= */
-
-@media (max-width: 768px) {
-    /* Hero sekce - vše hezky na střed */
-    .hero-text {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .hero-badges {
-        justify-content: center;
-    }
-    
-    /* Patička - zarovnání na střed */
-    .footer-content, .footer-bottom {
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .footer-links {
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Přepis původního chybného zarovnání štítků a patičky vlevo */
-    .hero-badges {
-        align-items: center; 
-    }
-    
-    .footer-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-content {
-        align-items: center; /* Přepíše původní flex-start */
     }
 }
